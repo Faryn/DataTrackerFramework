@@ -10,6 +10,9 @@
 		DA0C26111F9005D60000E81C /* DataTrackerFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0C26071F9005D60000E81C /* DataTrackerFramework.framework */; };
 		DA0C26161F9005D60000E81C /* DataTrackerFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C26151F9005D60000E81C /* DataTrackerFrameworkTests.swift */; };
 		DA0C26181F9005D60000E81C /* DataTrackerFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0C260A1F9005D60000E81C /* DataTrackerFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA0C26221F90064E0000E81C /* TrafficStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C26211F90064E0000E81C /* TrafficStats.swift */; };
+		DA0C26241F926ABF0000E81C /* TrafficService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C26231F926ABF0000E81C /* TrafficService.swift */; };
+		DA0C26261F926AD20000E81C /* TrafficDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C26251F926AD20000E81C /* TrafficDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		DA0C26101F9005D60000E81C /* DataTrackerFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTrackerFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0C26151F9005D60000E81C /* DataTrackerFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTrackerFrameworkTests.swift; sourceTree = "<group>"; };
 		DA0C26171F9005D60000E81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0C26211F90064E0000E81C /* TrafficStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficStats.swift; sourceTree = "<group>"; };
+		DA0C26231F926ABF0000E81C /* TrafficService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficService.swift; sourceTree = "<group>"; };
+		DA0C26251F926AD20000E81C /* TrafficDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				DA0C260A1F9005D60000E81C /* DataTrackerFramework.h */,
 				DA0C260B1F9005D60000E81C /* Info.plist */,
+				DA0C26211F90064E0000E81C /* TrafficStats.swift */,
+				DA0C26231F926ABF0000E81C /* TrafficService.swift */,
+				DA0C26251F926AD20000E81C /* TrafficDataViewController.swift */,
 			);
 			path = DataTrackerFramework;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					DA0C26061F9005D60000E81C = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					DA0C260F1F9005D60000E81C = {
@@ -196,6 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0C26221F90064E0000E81C /* TrafficStats.swift in Sources */,
+				DA0C26241F926ABF0000E81C /* TrafficService.swift in Sources */,
+				DA0C26261F926AD20000E81C /* TrafficDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 		DA0C261C1F9005D60000E81C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = paulpfeiffer.DataTrackerFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +370,7 @@
 		DA0C261D1F9005D60000E81C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +392,7 @@
 		DA0C261F1F9005D60000E81C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CV5377K4H;
 				INFOPLIST_FILE = DataTrackerFrameworkTests/Info.plist;
@@ -390,6 +407,7 @@
 		DA0C26201F9005D60000E81C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CV5377K4H;
 				INFOPLIST_FILE = DataTrackerFrameworkTests/Info.plist;
