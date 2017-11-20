@@ -9,7 +9,7 @@
 import Foundation
 
 open class TrafficStats {
-    var trafficStats: NSDictionary? {
+    open var trafficStats: NSDictionary? {
         didSet {
             
         }
