@@ -22,10 +22,24 @@ open class TrafficStats {
     open var usedPercentage: Int?
     open var subscriptions: NSArray?
     open var initialVolume: Int?
+    open var usedVolume: Int?
     open var downSpeed: Int?
     open var upSpeed: Int?
     open var downSpeedString: String?
     open var upSpeedString: String?
+    open var initialVolumeMB: Int? {
+        get {
+            return initialVolume! / 1024 / 1024
+        }
+    }
+    
+    open var usedVolumeMB: Int? {
+        get {
+            if usedVolume != 0 {
+                return usedVolume! / 1024 / 1024
+            } else { return 0 }
+        }
+    }
     
 
     
@@ -43,6 +57,7 @@ open class TrafficStats {
         upSpeed = trafficStats?.value(forKey: "upSpeed") as? Int
         downSpeedString = trafficStats?.value(forKey: "downSpeedStr") as? String
         upSpeedString = trafficStats?.value(forKey: "upSpeedStr") as? String
+        usedVolume = trafficStats?.value(forKey: "usedVolume") as? Int
         
         
     }
